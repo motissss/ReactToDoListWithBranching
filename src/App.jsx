@@ -1,0 +1,29 @@
+import { useState } from 'react'
+import './App.css'
+
+function App() {
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState('');
+  function addTodo(e) {
+    e.preventDefault();
+    if (!input.trim()) return;
+    setTodos([...todos, { id: crypto.randomUUID(), text: input, completed: false }])
+    setInput('')
+  }
+  return (
+    <>
+      <h1>ToDoList:</h1>
+      <h2>Tasks:</h2>
+      <form onSubmit={addTodo}>
+        <input value={input} onChange={(e) => setInput(e.target.value)}></input>
+        <button type="submit">submit</button>
+      </form>
+      <ul>
+        {todos.map(todo => <li key={todo.id}>{todo.text}
+        </li>)}
+      </ul >
+    </>
+  )
+}
+
+export default App
