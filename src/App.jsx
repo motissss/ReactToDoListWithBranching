@@ -19,7 +19,7 @@ function App() {
         <button type="submit">submit</button>
       </form>
       <ul>
-        {todos.map(todo => <li key={todo.id}>{todo.text}
+        {todos.map(todo => <li key={todo.id} className="todo-item">{todo.text}
         </li>)}
       </ul >
     </>

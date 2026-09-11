@@ -16,7 +16,10 @@
     outline-offset: 2px;
   }
 }
-
+.todo-item {
+  padding: 8px;
+  font-size: 1.1rem;
+}
 .hero {
   position: relative;
 
