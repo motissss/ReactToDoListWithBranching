@@ -22,7 +22,7 @@ function App() {
         <button type="submit">submit</button>
       </form>
       <ul>
-        {todos.map(todo => <li key={todo.id} className="todo-item">{todo.text}
+        {todos.map(todo => <li key={todo.id} className="todo-item">{todo.text}<button type="button" onClick={() => deleteTodo(todo.id)}>Delete</button>
         </li>)}
       </ul >
     </>
