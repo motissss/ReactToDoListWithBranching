@@ -10,6 +10,9 @@ function App() {
     setTodos([...todos, { id: crypto.randomUUID(), text: input, completed: false }])
     setInput('')
   }
+  function deleteTodo(id) {
+    setTodos(todos.filter(todo => todo.id !== id));
+  }
   return (
     <>
       <h1>ToDoList:</h1>
